@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIEM Dashboard - Developed by Pavan Teja</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 SIEM Alert Dashboard</h1>
+        <p>Developed by <strong>Pavan Teja</strong> | <a href="https://github.com/Pavansoc" target="_blank">@Pavansoc</a></p>
+        <hr>
+        <h2>Detected Alerts</h2>
+        {% if alerts %}
+            <ul>
+                {% for alert in alerts %}
+                    <li>{{ alert }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No suspicious logs found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
